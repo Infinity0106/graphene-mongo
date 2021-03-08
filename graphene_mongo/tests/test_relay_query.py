@@ -160,7 +160,7 @@ def test_should_query_all_editors(fixtures, fixtures_dirname):
 
     avator_filename = os.path.join(fixtures_dirname, "image.jpg")
     with open(avator_filename, "rb") as f:
-        data = base64.b64encode(f.read())
+        data = base64.b64encode(f.read()).decode("utf-8")
 
     expected = {
         "editors": {
